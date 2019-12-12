@@ -75,7 +75,7 @@ arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Infor
 
 arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Effective_Date", "Effective_Date")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_LNI_ID", "LNI_ID")
+arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_LNI_ID", "LNI_ID", "LNI ID")
 
 # Delete extra fields
 arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Folder_Locatio")
