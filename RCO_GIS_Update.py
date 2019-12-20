@@ -1,4 +1,3 @@
-# Import modules
 import arcpy
 
 # import smtplib for emails
@@ -41,62 +40,62 @@ NewRCO = "Zoning_RCO_rev"
 arcpy.CopyFeatures_management(CurrRCO, NewRCO)
 
 # Change field names to match OpenMaps schema
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Organization_N", "Organization_Name")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Organizati", "Organization_Name")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Organization_A", "Organization_Address")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Organiza_1", "Organization_Address")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Meeting_Locati", "Meeting_Location_Address")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Meeting_Lo", "Meeting_Location_Address")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Org_Type", "Org_Type")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Org_Type", "Org_Type")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Preffered_Cont", "Preffered_Contact_Method")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Preffered_", "Preffered_Contact_Method")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Primary_Name", "Primary_Name")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Primary_Na", "Primary_Name")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Primary_Addres", "Primary_Address")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Primary_Ad", "Primary_Address")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Primary_Email", "Primary_Email")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Primary_Em", "Primary_Email")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Primary_Phone", "Primary_Phone")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Primary_Ph", "Primary_Phone")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_P_Phone_Ext", "P_Phone_Ext")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_P_Phone_Ex", "P_Phone_Ext")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Alternate_Name", "Alternate_Name")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Alternate_", "Alternate_Name")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Alternate_Addr", "Alternate_Address")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Alternate1", "Alternate_Address")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Alternate_Emai", "Alternate_Email")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Alternat_1", "Alternate_Email")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Alternate_Phon", "Alternate_Phone")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Alternat_2", "Alternate_Phone")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_A_Phone_Ext", "A_Phone_Ext")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_A_Phone_Ex", "A_Phone_Ext")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_ExpirationYear", "ExpirationYear")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Expiration", "ExpirationYear")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Effective_Date", "Effective_Date")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Effective_", "Effective_Date")
 
-arcpy.AlterField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_LNI_ID", "LNI_ID", "LNI ID")
+arcpy.AlterField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_LNI_ID", "LNI_ID", "LNI ID")
 
 # Delete extra fields
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Folder_Locatio")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Folder_Loc")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Application_Da")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Applicatio")
 
 arcpy.DeleteField_management(NewRCO, "Zoning_RCO_Org_Name")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Ward_Number")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Ward_Numbe")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Ward_Political")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Ward_Polit")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Status")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Status")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Docs_Recieved")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Docs_Recie")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Council_Distri")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Council_Di")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_Notes")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_Notes")
 
-arcpy.DeleteField_management(NewRCO, "RCO_Registration_dbo_RCO_Registration_Information_ESRI_OID")
+arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_ESRI_OID")
 
 # send the email 
 smtpObj.sendmail(sender, receivers, message)
