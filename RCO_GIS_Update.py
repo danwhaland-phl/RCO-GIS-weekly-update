@@ -97,7 +97,7 @@ arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_
 
 arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_ESRI_OID")
 
-arcpy.DeleteField_management(NewRCO, "GIS_ID")
+arcpy.DeleteField_management(NewRCO, "Zoning_RCO_GIS_ID")
 
 # send the email 
 smtpObj.sendmail(sender, receivers, message)
