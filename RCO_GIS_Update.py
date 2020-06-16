@@ -13,7 +13,7 @@ password = os.environ.get('DPDAppsProd_password')
 
 message = """Subject: RCO Ready for Upload
 
-The working version of the RCO GIS layer has been updated and is ready for an upload. The changes made to the layer during this update will be reflected in the authoritative RCO layer tomorrow. Thanks!
+The working version of the RCO layer has been updated and is ready for upload. The changes made during this update will appear in the authoritative RCO layer tomorrow. 
 
 -DPD GIS
 """
