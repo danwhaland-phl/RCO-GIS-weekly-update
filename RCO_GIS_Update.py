@@ -8,12 +8,12 @@ import os
 
 # email variables
 sender = os.environ.get('DPDAppsProd_Email')
-receivers = [os.environ.get('Pauline_Email'), os.environ.get('Dan_Email'), os.environ.get('Mike_M_Email'), os.environ.get('Sheena_Email')]
+receivers = [os.environ.get('Pauline_Email'), os.environ.get('Dan_Email')]
 password = os.environ.get('DPDAppsProd_password') 
 
 message = """Subject: RCO Ready for Upload
 
-The working version of the RCO layer has been updated and is ready for upload. The changes made during this update will appear in the authoritative RCO layer tomorrow. 
+The working version of the RCO layer has been updated and is ready for upload. 
 
 -DPD GIS
 """
