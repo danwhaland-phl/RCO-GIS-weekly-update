@@ -6,22 +6,6 @@ import smtplib
 # import os for environment variables
 import os
 
-# email variables
-sender = os.environ.get('DPDAppsProd_Email')
-receivers = [os.environ.get('Pauline_Email'), os.environ.get('Dan_Email')]
-password = os.environ.get('DPDAppsProd_password') 
-
-message = """Subject: RCO Ready for Upload
-
-The working version of the RCO layer has been updated and is ready for upload. 
-
--DPD GIS
-"""
-
-smtpObj = smtplib.SMTP(host='smtp.office365.com', port=587)
-smtpObj.starttls()
-smtpObj.login(sender,password)
-
 # Set workspace
 arcpy.env.workspace = "P:/Zoning/RCO/RCO Data Entry/Zoning_RCO.gdb"
 
@@ -98,6 +82,22 @@ arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_
 arcpy.DeleteField_management(NewRCO, "DPD_RCO_Registration_dbo_RCO_Registration_Information_ESRI_OID")
 
 arcpy.DeleteField_management(NewRCO, "Zoning_RCO_GIS_ID")
+
+# email variables
+sender = os.environ.get('DPDAppsProd_Email')
+receivers = [os.environ.get('Pauline_Email'), os.environ.get('Dan_Email')]
+password = os.environ.get('DPDAppsProd_password') 
+
+message = """Subject: RCO Ready for Upload
+
+The working version of the RCO layer has been updated and is ready for upload. 
+
+-DPD GIS
+"""
+
+smtpObj = smtplib.SMTP(host='smtp.office365.com', port=587)
+smtpObj.starttls()
+smtpObj.login(sender,password)
 
 # send the email 
 smtpObj.sendmail(sender, receivers, message)
